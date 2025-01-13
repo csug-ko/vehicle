@@ -16,13 +16,13 @@ class Automobile {
     public static int totalCount;
     private static ArrayList<Automobile> autoInventoryList = new ArrayList<>();
 
-    // Setters
-    public void setAutoYear(int year) { this.autoYear = year; }
-    public void setAutoMake(String make) { this.autoMake = make; }
-    public void setAutoModel(String model) { this.autoModel = model; }
-    public void setAutoColor(String color) { this.autoColor = color; }
-    public void setIsClean(boolean clean) { this.isClean = clean; }
-    public void setAutoID() { this.autoID = totalCount + 1000; }
+    // Setters 
+    public void setAutoYear(int year) { this.autoYear = year;System.out.println("Success"); }
+    public void setAutoMake(String make) { this.autoMake = make;System.out.println("Success"); }
+    public void setAutoModel(String model) { this.autoModel = model; System.out.println("Success");}
+    public void setAutoColor(String color) { this.autoColor = color; System.out.println("Success");}
+    public void setIsClean(boolean clean) { this.isClean = clean;System.out.println("Success"); }
+    public void setAutoID() { this.autoID = totalCount + 1000; System.out.println("Success");}
     public  void setOnSale(boolean sale) {
         this.onSale = sale;
         if (sale==true) {
@@ -31,14 +31,17 @@ class Automobile {
             double salePrice = scanner.nextDouble();
             scanner.close();
             setAutoSalePrice(salePrice);
+            System.out.println("Success");
         }
     }
-    public void setAutoListedPrice(double listPrice) { this.autoListedPrice = listPrice; }
+    public void setAutoListedPrice(double listPrice) { this.autoListedPrice = listPrice;System.out.println("Success"); }
     public void setAutoSalePrice(double salePrice) {
         this.autoSalePrice = salePrice;
         setAutoDiscountedAmount(autoListedPrice - salePrice);
+        System.out.println("Success");
     }
-    public void setAutoDiscountedAmount(double discountedAmount) { this.autoDiscountedAmount = discountedAmount; }
+    public void setAutoDiscountedAmount(double discountedAmount) 
+    { this.autoDiscountedAmount = discountedAmount;System.out.println("Success"); }
 
     // Getters
     public int getAutoYear() { return this.autoYear; }
